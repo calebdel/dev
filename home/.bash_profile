@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-echo
-echo ======================================
+export PATH=$HOME/bin:$PATH
 
 # direnv
 
@@ -10,13 +9,12 @@ echo ======================================
 # node / nvm
 
   source /opt/nvm/nvm.sh
-  nvm use stable
+  nvm use stable 2>&1 > /dev/null
 
 # ruby / ruby-install / chruby
 
   source /usr/local/share/chruby/chruby.sh
-  chruby ruby
-  ruby -v
+  chruby ruby 2>&1 > /dev/null
 
   # Wrap ruby-install so it doesn't store anything
   # in $HOME.
@@ -28,9 +26,9 @@ echo ======================================
     /usr/local/bin/ruby-install --src-dir /tmp --cleanup --rubies-dir /opt/rubies $@
     source /usr/local/share/chruby/chruby.sh
     chruby $@
-    gem install bundle
+    gem install bundler
   }
 
+# status
 
-echo ======================================
-echo
+  dev-status

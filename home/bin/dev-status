@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+echo
+cowsay -n -f stegosaurus <<eof
+
+  Ruby: v$(ruby -e "print RUBY_VERSION")                      $()
+  Node: $(node -v)
+
+eof
+echo
+echo
