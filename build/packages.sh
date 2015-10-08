@@ -5,6 +5,7 @@ apt-get -y --force-yes install \
   htop \
   wget \
   avahi-daemon \
+  cowsay \
   sudo \
   mysql-client \
   libsqlite3-dev
@@ -53,5 +54,5 @@ curl -sSL https://bootstrap.pypa.io/get-pip.py | python
 # DOCKER
 ################################################
 
-curl -sL https://get.docker.com/ | bash -
+curl -sSL https://get.docker.com/ | bash -
 pip install docker-compose
