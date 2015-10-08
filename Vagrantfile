@@ -26,7 +26,7 @@ Vagrant.configure(2) do |config|
   # stuff
   config.vm.network "public_network"
 
-  run build scripts through erb, then execute them.
+  # run build scripts through erb, then execute them.
   ["cedar.sh", "packages.sh", "user.sh", "tweaks.sh", "local.sh"]
     .map  { |filename| File.read("build/#{filename}") }
     .map  { |template| ERB.new(template).result }
